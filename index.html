@@ -1,0 +1,1665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Guide — 1. An Introduction</title>
+  <meta name="description" content="What JavaScript actually is, where it runs, browser vs Node.js, developer console, and what it can and cannot do. A clear, grounded guide for modern developers.">
+
+  <!-- Typography from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="top-bar">
+    <div class="top-bar-left">
+      <button class="menu-toggle-btn" id="menu-toggle" aria-label="Toggle chapter menu">&#9776; Chapters</button>
+      <div class="brand-mark">
+        <span class="brand-badge">JS</span>
+        <span>JavaScript Guide</span>
+      </div>
+    </div>
+    <div class="top-bar-right">
+      <div class="top-bar-meta">
+        <span>Chapter 1 of 175</span>
+        <span>10 min read</span>
+      </div>
+      <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle color theme">
+        <span class="theme-indicator-dot"></span>
+        <span id="theme-text">Dark Mode</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- App Layout: Sidebar + Main Content -->
+  <div class="app-layout">
+    
+    <!-- Left Chapters Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-search-box">
+        <input type="text" id="sidebar-search" class="sidebar-search-input" placeholder="Search 175 chapters..." autocomplete="off">
+      </div>
+      <div class="sidebar-stats">
+        <span><strong>2</strong> / 175 Chapters Live</span>
+        <span>Roadmap: Part 1 &rarr; 3</span>
+      </div>
+      <nav class="sidebar-tree">
+        <div class="part-header">Part 1 — The JavaScript Language</div>
+<div class="section-group">
+  <div class="section-title">1. An Introduction</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#section-what-is-js" class="chapter-link active">
+        <span>1. An Introduction to JavaScript</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#section-specs-manuals" class="chapter-link">
+        <span>2. Manuals and specifications</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#section-editors" class="chapter-link">
+        <span>3. Code editors</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#section-console" class="chapter-link">
+        <span>4. Developer console</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">2. JavaScript Fundamentals</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="hello-world.html" class="chapter-link">
+        <span>5. Hello, world!</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="6. Code structure" data-section="2. JavaScript Fundamentals">
+        <span>6. Code structure</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="7. The modern mode, `&quot;use strict&quot;`" data-section="2. JavaScript Fundamentals">
+        <span>7. The modern mode, `&quot;use strict&quot;`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="8. Variables" data-section="2. JavaScript Fundamentals">
+        <span>8. Variables</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="9. Data types" data-section="2. JavaScript Fundamentals">
+        <span>9. Data types</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="10. Interaction: `alert`, `prompt`, `confirm`" data-section="2. JavaScript Fundamentals">
+        <span>10. Interaction: `alert`, `prompt`, `confirm`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="11. Type Conversions" data-section="2. JavaScript Fundamentals">
+        <span>11. Type Conversions</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="12. Basic operators, maths" data-section="2. JavaScript Fundamentals">
+        <span>12. Basic operators, maths</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="13. Comparisons" data-section="2. JavaScript Fundamentals">
+        <span>13. Comparisons</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="14. Conditional branching: `if`, `?`" data-section="2. JavaScript Fundamentals">
+        <span>14. Conditional branching: `if`, `?`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="hello-world.html" class="chapter-link">
+        <span>15. Logical operators</span>
+        <span class="badge-active">Ready</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="16. Nullish coalescing operator `??`" data-section="2. JavaScript Fundamentals">
+        <span>16. Nullish coalescing operator `??`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="17. Loops: `while` and `for`" data-section="2. JavaScript Fundamentals">
+        <span>17. Loops: `while` and `for`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="18. The `&quot;switch&quot;` statement" data-section="2. JavaScript Fundamentals">
+        <span>18. The `&quot;switch&quot;` statement</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="19. Functions" data-section="2. JavaScript Fundamentals">
+        <span>19. Functions</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="20. Function expressions" data-section="2. JavaScript Fundamentals">
+        <span>20. Function expressions</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="21. Arrow functions, the basics" data-section="2. JavaScript Fundamentals">
+        <span>21. Arrow functions, the basics</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">3. JavaScript Specials</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="22. Code quality" data-section="3. JavaScript Specials">
+        <span>22. Code quality</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="23. Debugging in the browser" data-section="3. JavaScript Specials">
+        <span>23. Debugging in the browser</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="24. Coding Style" data-section="3. JavaScript Specials">
+        <span>24. Coding Style</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="25. Comments" data-section="3. JavaScript Specials">
+        <span>25. Comments</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="26. Ninja code" data-section="3. JavaScript Specials">
+        <span>26. Ninja code</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="27. Automated testing with Mocha" data-section="3. JavaScript Specials">
+        <span>27. Automated testing with Mocha</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="28. Polyfills and transpilers" data-section="3. JavaScript Specials">
+        <span>28. Polyfills and transpilers</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">4. Objects: The Basics</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="29. Objects" data-section="4. Objects: The Basics">
+        <span>29. Objects</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="30. Object references and copying" data-section="4. Objects: The Basics">
+        <span>30. Object references and copying</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="31. Garbage collection" data-section="4. Objects: The Basics">
+        <span>31. Garbage collection</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="32. Object methods, `this`" data-section="4. Objects: The Basics">
+        <span>32. Object methods, `this`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="33. Constructor, operator `new`" data-section="4. Objects: The Basics">
+        <span>33. Constructor, operator `new`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="34. Optional chaining `?.`" data-section="4. Objects: The Basics">
+        <span>34. Optional chaining `?.`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="35. Symbol type" data-section="4. Objects: The Basics">
+        <span>35. Symbol type</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="36. Object to primitive conversion" data-section="4. Objects: The Basics">
+        <span>36. Object to primitive conversion</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">5. Data Types</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="37. Methods of primitives" data-section="5. Data Types">
+        <span>37. Methods of primitives</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="38. Numbers" data-section="5. Data Types">
+        <span>38. Numbers</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="39. Strings" data-section="5. Data Types">
+        <span>39. Strings</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="40. Arrays" data-section="5. Data Types">
+        <span>40. Arrays</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="41. Array methods" data-section="5. Data Types">
+        <span>41. Array methods</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="42. Iterables" data-section="5. Data Types">
+        <span>42. Iterables</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="43. Map and Set" data-section="5. Data Types">
+        <span>43. Map and Set</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="44. WeakMap and WeakSet" data-section="5. Data Types">
+        <span>44. WeakMap and WeakSet</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="45. `Object.keys`, `values`, `entries`" data-section="5. Data Types">
+        <span>45. `Object.keys`, `values`, `entries`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="46. Destructuring assignment" data-section="5. Data Types">
+        <span>46. Destructuring assignment</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="47. Date and time" data-section="5. Data Types">
+        <span>47. Date and time</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="48. JSON methods, `toJSON`" data-section="5. Data Types">
+        <span>48. JSON methods, `toJSON`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">6. Advanced Working with Functions</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="49. Recursion and stack" data-section="6. Advanced Working with Functions">
+        <span>49. Recursion and stack</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="50. Rest parameters and spread syntax" data-section="6. Advanced Working with Functions">
+        <span>50. Rest parameters and spread syntax</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="51. Variable scope, closure" data-section="6. Advanced Working with Functions">
+        <span>51. Variable scope, closure</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="52. The old `&quot;var&quot;`" data-section="6. Advanced Working with Functions">
+        <span>52. The old `&quot;var&quot;`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="53. Global object" data-section="6. Advanced Working with Functions">
+        <span>53. Global object</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="54. Function object, NFE" data-section="6. Advanced Working with Functions">
+        <span>54. Function object, NFE</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="55. The `new Function` syntax" data-section="6. Advanced Working with Functions">
+        <span>55. The `new Function` syntax</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="56. Scheduling: `setTimeout` and `setInterval`" data-section="6. Advanced Working with Functions">
+        <span>56. Scheduling: `setTimeout` and `setInterval`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="57. Decorators and forwarding, `call/apply`" data-section="6. Advanced Working with Functions">
+        <span>57. Decorators and forwarding, `call/apply`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="58. Function binding" data-section="6. Advanced Working with Functions">
+        <span>58. Function binding</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="59. Arrow functions revisited" data-section="6. Advanced Working with Functions">
+        <span>59. Arrow functions revisited</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">7. Object Properties Configuration</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="60. Property flags and descriptors" data-section="7. Object Properties Configuration">
+        <span>60. Property flags and descriptors</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="61. Property getters and setters" data-section="7. Object Properties Configuration">
+        <span>61. Property getters and setters</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">8. Prototypes, Inheritance</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="62. Prototypal inheritance" data-section="8. Prototypes, Inheritance">
+        <span>62. Prototypal inheritance</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="63. `F.prototype`" data-section="8. Prototypes, Inheritance">
+        <span>63. `F.prototype`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="64. Native prototypes" data-section="8. Prototypes, Inheritance">
+        <span>64. Native prototypes</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="65. Prototype methods, objects without `__proto__`" data-section="8. Prototypes, Inheritance">
+        <span>65. Prototype methods, objects without `__proto__`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">9. Classes</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="66. Class basic syntax" data-section="9. Classes">
+        <span>66. Class basic syntax</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="67. Class inheritance" data-section="9. Classes">
+        <span>67. Class inheritance</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="68. Static properties and methods" data-section="9. Classes">
+        <span>68. Static properties and methods</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="69. Private and protected properties and methods" data-section="9. Classes">
+        <span>69. Private and protected properties and methods</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="70. Extending built-in classes" data-section="9. Classes">
+        <span>70. Extending built-in classes</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="71. Class checking: `instanceof`" data-section="9. Classes">
+        <span>71. Class checking: `instanceof`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="72. Mixins" data-section="9. Classes">
+        <span>72. Mixins</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">10. Error Handling</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="73. Error handling, `try...catch`" data-section="10. Error Handling">
+        <span>73. Error handling, `try...catch`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="74. Custom errors, extending `Error`" data-section="10. Error Handling">
+        <span>74. Custom errors, extending `Error`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">11. Promises, async/await</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="75. Introduction: callbacks" data-section="11. Promises, async/await">
+        <span>75. Introduction: callbacks</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="76. Promise" data-section="11. Promises, async/await">
+        <span>76. Promise</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="77. Promises chaining" data-section="11. Promises, async/await">
+        <span>77. Promises chaining</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="78. Error handling with promises" data-section="11. Promises, async/await">
+        <span>78. Error handling with promises</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="79. Promise API" data-section="11. Promises, async/await">
+        <span>79. Promise API</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="80. Promisification" data-section="11. Promises, async/await">
+        <span>80. Promisification</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="81. Microtasks" data-section="11. Promises, async/await">
+        <span>81. Microtasks</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="82. Async/await" data-section="11. Promises, async/await">
+        <span>82. Async/await</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">12. Generators, Advanced Iteration</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="83. Generators" data-section="12. Generators, Advanced Iteration">
+        <span>83. Generators</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="84. Async iteration and generators" data-section="12. Generators, Advanced Iteration">
+        <span>84. Async iteration and generators</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">13. Modules</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="85. Modules, introduction" data-section="13. Modules">
+        <span>85. Modules, introduction</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="86. Export and Import" data-section="13. Modules">
+        <span>86. Export and Import</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="87. Dynamic imports" data-section="13. Modules">
+        <span>87. Dynamic imports</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">14. Miscellaneous</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="88. Proxy and Reflect" data-section="14. Miscellaneous">
+        <span>88. Proxy and Reflect</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="89. Eval: run a code string" data-section="14. Miscellaneous">
+        <span>89. Eval: run a code string</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="90. Currying" data-section="14. Miscellaneous">
+        <span>90. Currying</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="91. Reference Type" data-section="14. Miscellaneous">
+        <span>91. Reference Type</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="92. BigInt" data-section="14. Miscellaneous">
+        <span>92. BigInt</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="93. Unicode, String internals" data-section="14. Miscellaneous">
+        <span>93. Unicode, String internals</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="94. WeakRef and FinalizationRegistry" data-section="14. Miscellaneous">
+        <span>94. WeakRef and FinalizationRegistry</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="part-header">Part 2 — Browser: Document, Events, Interfaces</div>
+<div class="section-group">
+  <div class="section-title">15. Document</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="95. Browser environment, specs" data-section="15. Document">
+        <span>95. Browser environment, specs</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="96. DOM tree" data-section="15. Document">
+        <span>96. DOM tree</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="97. Walking the DOM" data-section="15. Document">
+        <span>97. Walking the DOM</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="98. Searching: `getElement*`, `querySelector*`" data-section="15. Document">
+        <span>98. Searching: `getElement*`, `querySelector*`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="99. Node properties: type, tag and contents" data-section="15. Document">
+        <span>99. Node properties: type, tag and contents</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="100. Attributes and properties" data-section="15. Document">
+        <span>100. Attributes and properties</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="101. Modifying the document" data-section="15. Document">
+        <span>101. Modifying the document</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="102. Styles and classes" data-section="15. Document">
+        <span>102. Styles and classes</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="103. Element size and scrolling" data-section="15. Document">
+        <span>103. Element size and scrolling</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="104. Window sizes and scrolling" data-section="15. Document">
+        <span>104. Window sizes and scrolling</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="105. Coordinates" data-section="15. Document">
+        <span>105. Coordinates</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">16. Introduction to Events</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="106. Introduction to browser events" data-section="16. Introduction to Events">
+        <span>106. Introduction to browser events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="107. Bubbling and capturing" data-section="16. Introduction to Events">
+        <span>107. Bubbling and capturing</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="108. Event delegation" data-section="16. Introduction to Events">
+        <span>108. Event delegation</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="109. Browser default actions" data-section="16. Introduction to Events">
+        <span>109. Browser default actions</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="110. Dispatching custom events" data-section="16. Introduction to Events">
+        <span>110. Dispatching custom events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">17. UI Events</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="111. Mouse events" data-section="17. UI Events">
+        <span>111. Mouse events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="112. Moving the mouse: `mouseover/out`, `mouseenter/leave`" data-section="17. UI Events">
+        <span>112. Moving the mouse: `mouseover/out`, `mouseenter/leave`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="113. Drag&#x27;n&#x27;Drop with mouse events" data-section="17. UI Events">
+        <span>113. Drag&#x27;n&#x27;Drop with mouse events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="114. Pointer events" data-section="17. UI Events">
+        <span>114. Pointer events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="115. Keyboard: `keydown` and `keyup`" data-section="17. UI Events">
+        <span>115. Keyboard: `keydown` and `keyup`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="116. Scrolling" data-section="17. UI Events">
+        <span>116. Scrolling</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">18. Forms, Controls</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="117. Form properties and methods" data-section="18. Forms, Controls">
+        <span>117. Form properties and methods</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="118. Focusing: `focus/blur`" data-section="18. Forms, Controls">
+        <span>118. Focusing: `focus/blur`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="119. Events: `change`, `input`, `cut`, `copy`, `paste`" data-section="18. Forms, Controls">
+        <span>119. Events: `change`, `input`, `cut`, `copy`, `paste`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="120. Forms: event and method `submit`" data-section="18. Forms, Controls">
+        <span>120. Forms: event and method `submit`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">19. Document and Resource Loading</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="121. Page: `DOMContentLoaded`, `load`, `beforeunload`, `unload`" data-section="19. Document and Resource Loading">
+        <span>121. Page: `DOMContentLoaded`, `load`, `beforeunload`, `unload`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="122. Scripts: `async`, `defer`" data-section="19. Document and Resource Loading">
+        <span>122. Scripts: `async`, `defer`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="123. Resource loading: `onload` and `onerror`" data-section="19. Document and Resource Loading">
+        <span>123. Resource loading: `onload` and `onerror`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">20. Miscellaneous</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="124. Mutation observer" data-section="20. Miscellaneous">
+        <span>124. Mutation observer</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="125. Selection and Range" data-section="20. Miscellaneous">
+        <span>125. Selection and Range</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="126. Event loop: microtasks and macrotasks" data-section="20. Miscellaneous">
+        <span>126. Event loop: microtasks and macrotasks</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="part-header">Part 3 — Additional Articles</div>
+<div class="section-group">
+  <div class="section-title">21. Frames and Windows</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="127. Popups and window methods" data-section="21. Frames and Windows">
+        <span>127. Popups and window methods</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="128. Cross-window communication" data-section="21. Frames and Windows">
+        <span>128. Cross-window communication</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="129. The clickjacking attack" data-section="21. Frames and Windows">
+        <span>129. The clickjacking attack</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">22. Binary Data, Files</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="130. ArrayBuffer, binary arrays" data-section="22. Binary Data, Files">
+        <span>130. ArrayBuffer, binary arrays</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="131. TextDecoder and TextEncoder" data-section="22. Binary Data, Files">
+        <span>131. TextDecoder and TextEncoder</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="132. Blob" data-section="22. Binary Data, Files">
+        <span>132. Blob</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="133. File and FileReader" data-section="22. Binary Data, Files">
+        <span>133. File and FileReader</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">23. Network Requests</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="134. Fetch" data-section="23. Network Requests">
+        <span>134. Fetch</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="135. FormData" data-section="23. Network Requests">
+        <span>135. FormData</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="136. Fetch: Download progress" data-section="23. Network Requests">
+        <span>136. Fetch: Download progress</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="137. Fetch: Abort" data-section="23. Network Requests">
+        <span>137. Fetch: Abort</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="138. Fetch: Cross-Origin Requests" data-section="23. Network Requests">
+        <span>138. Fetch: Cross-Origin Requests</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="139. Fetch API" data-section="23. Network Requests">
+        <span>139. Fetch API</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="140. URL objects" data-section="23. Network Requests">
+        <span>140. URL objects</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="141. XMLHttpRequest" data-section="23. Network Requests">
+        <span>141. XMLHttpRequest</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="142. Resumable file upload" data-section="23. Network Requests">
+        <span>142. Resumable file upload</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="143. Long polling" data-section="23. Network Requests">
+        <span>143. Long polling</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="144. WebSocket" data-section="23. Network Requests">
+        <span>144. WebSocket</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="145. Server Sent Events" data-section="23. Network Requests">
+        <span>145. Server Sent Events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">24. Storing Data in the Browser</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="146. Cookies, `document.cookie`" data-section="24. Storing Data in the Browser">
+        <span>146. Cookies, `document.cookie`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="147. LocalStorage, sessionStorage" data-section="24. Storing Data in the Browser">
+        <span>147. LocalStorage, sessionStorage</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="148. IndexedDB" data-section="24. Storing Data in the Browser">
+        <span>148. IndexedDB</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">25. Animation</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="149. Bezier curve" data-section="25. Animation">
+        <span>149. Bezier curve</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="150. CSS-animations" data-section="25. Animation">
+        <span>150. CSS-animations</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="151. JavaScript animations" data-section="25. Animation">
+        <span>151. JavaScript animations</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">26. Web Components</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="152. From the orbital height" data-section="26. Web Components">
+        <span>152. From the orbital height</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="153. Custom elements" data-section="26. Web Components">
+        <span>153. Custom elements</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="154. Shadow DOM" data-section="26. Web Components">
+        <span>154. Shadow DOM</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="155. Template element" data-section="26. Web Components">
+        <span>155. Template element</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="156. Shadow DOM slots, composition" data-section="26. Web Components">
+        <span>156. Shadow DOM slots, composition</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="157. Shadow DOM styling" data-section="26. Web Components">
+        <span>157. Shadow DOM styling</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="158. Shadow DOM and events" data-section="26. Web Components">
+        <span>158. Shadow DOM and events</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">27. Regular Expressions</div>
+  <ul class="chapter-list">
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="159. Patterns and flags" data-section="27. Regular Expressions">
+        <span>159. Patterns and flags</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="160. Character classes" data-section="27. Regular Expressions">
+        <span>160. Character classes</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="161. Unicode: flag `u` and class `\p{...}`" data-section="27. Regular Expressions">
+        <span>161. Unicode: flag `u` and class `\p{...}`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="162. Anchors: string start `^` and end `$`" data-section="27. Regular Expressions">
+        <span>162. Anchors: string start `^` and end `$`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="163. Multiline mode of anchors `^ $`, flag `m`" data-section="27. Regular Expressions">
+        <span>163. Multiline mode of anchors `^ $`, flag `m`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="164. Word boundary: `\b`" data-section="27. Regular Expressions">
+        <span>164. Word boundary: `\b`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="165. Escaping, special characters" data-section="27. Regular Expressions">
+        <span>165. Escaping, special characters</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="166. Sets and ranges `[...]`" data-section="27. Regular Expressions">
+        <span>166. Sets and ranges `[...]`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="167. Quantifiers `+`, `*`, `?` and `{n}`" data-section="27. Regular Expressions">
+        <span>167. Quantifiers `+`, `*`, `?` and `{n}`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="168. Greedy and lazy quantifiers" data-section="27. Regular Expressions">
+        <span>168. Greedy and lazy quantifiers</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="169. Capturing groups" data-section="27. Regular Expressions">
+        <span>169. Capturing groups</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="170. Backreferences in pattern: `\N` and `\k&lt;name&gt;`" data-section="27. Regular Expressions">
+        <span>170. Backreferences in pattern: `\N` and `\k&lt;name&gt;`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="171. Alternation (OR) `|`" data-section="27. Regular Expressions">
+        <span>171. Alternation (OR) `|`</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="172. Lookahead and lookbehind" data-section="27. Regular Expressions">
+        <span>172. Lookahead and lookbehind</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="173. Catastrophic backtracking" data-section="27. Regular Expressions">
+        <span>173. Catastrophic backtracking</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="174. Sticky flag `y`, searching at position" data-section="27. Regular Expressions">
+        <span>174. Sticky flag `y`, searching at position</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+    <li class="chapter-item">
+      <a href="#" class="chapter-link coming-soon" data-title="175. Methods of RegExp and String" data-section="27. Regular Expressions">
+        <span>175. Methods of RegExp and String</span>
+        <span class="badge-soon">Coming soon</span>
+      </a>
+    </li>
+  </ul>
+</div>
+<div class="section-group">
+  <div class="section-title">Total: **175 chapters/articles**</div>
+  <ul class="chapter-list">
+  </ul>
+</div>
+      </nav>
+    </aside>
+
+    <!-- Main Reading Area -->
+    <main class="main-content">
+      <article class="article-shell">
+        
+        <!-- Article Header -->
+        <header class="article-header">
+          <span class="topic-label">Part 1 &bull; Chapter 1</span>
+          <h1 class="article-title">An Introduction to JavaScript</h1>
+          <p class="article-subtitle">What JavaScript actually is, where it executes, and what it can (and can't) do in a real browser.</p>
+          
+          <div class="author-block">
+            <div class="author-avatar js">JS</div>
+            <div class="author-details">
+              <strong>Modern JavaScript Tutorial</strong>
+              <span>Practical, code-first breakdown for developers</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Section 1: What is JS, really? -->
+        <section id="section-what-is-js">
+          <p class="lead-paragraph">
+            Let's start without any motivational fluff: <strong>what is JavaScript, really?</strong>
+          </p>
+
+          <p>
+            Think of the web as three basic layers:
+          </p>
+
+          <ul>
+            <li><strong>HTML</strong> gives the page its structure (headings, buttons, inputs).</li>
+            <li><strong>CSS</strong> handles how it looks (typography, colors, layouts).</li>
+            <li><strong>JavaScript</strong> makes it <em>do stuff</em>.</li>
+          </ul>
+
+          <p>
+            Every time you click a button and a dropdown opens, or you like a post and the counter updates instantly without the whole page reloading &mdash; that's JavaScript running inside your browser.
+          </p>
+
+          <div class="teacher-callout">
+            <div class="callout-header">Quick Reality Check: Java vs JavaScript</div>
+            <p>
+              People often ask if JavaScript is related to Java. <strong>It isn't.</strong> Brendan Eich created JavaScript in 10 days at Netscape back in 1995. At that time, Java was the hot enterprise language, so Netscape renamed it from &ldquo;LiveScript&rdquo; to &ldquo;JavaScript&rdquo; purely for marketing buzz.
+            </p>
+            <p>
+              As the classic developer saying goes: <em>Java is to JavaScript as car is to carpet.</em> They are completely different languages with entirely different design goals.
+            </p>
+          </div>
+
+          <!-- DIAGRAM 1: The Web Triad -->
+          <div class="diagram-container">
+            <svg class="diagram-svg" viewBox="0 0 760 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="760" height="260" fill="transparent" />
+
+              <text x="380" y="28" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em" fill="var(--text-secondary)">HOW THE CORE WEB TRIAD WORKS TOGETHER</text>
+              <text x="380" y="48" text-anchor="middle" font-family="'Newsreader', serif" font-size="13" font-style="italic" fill="var(--text-tertiary)">HTML builds the bones, CSS styles the skin, JavaScript provides the behavior</text>
+
+              <!-- Box 1: HTML -->
+              <g transform="translate(30, 70)">
+                <rect x="0" y="0" width="215" height="150" rx="6" fill="var(--bg-surface)" stroke="var(--border-strong)" stroke-width="1.2" />
+                <rect x="0" y="0" width="215" height="26" rx="4" fill="var(--bg-subtle)" />
+                <text x="107" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="var(--text-main)">1. HTML (STRUCTURE)</text>
+                
+                <text x="20" y="55" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">&lt;button id="pay"&gt;</text>
+                <text x="20" y="75" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">  Pay Now</text>
+                <text x="20" y="95" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">&lt;/button&gt;</text>
+
+                <text x="107" y="132" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" fill="var(--text-tertiary)">Dumb static elements on screen</text>
+              </g>
+
+              <!-- Plus 1 -->
+              <text x="262" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="var(--border-strong)">+</text>
+
+              <!-- Box 2: CSS -->
+              <g transform="translate(280, 70)">
+                <rect x="0" y="0" width="215" height="150" rx="6" fill="var(--bg-surface)" stroke="var(--border-strong)" stroke-width="1.2" />
+                <rect x="0" y="0" width="215" height="26" rx="4" fill="var(--bg-subtle)" />
+                <text x="107" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="var(--text-main)">2. CSS (PRESENTATION)</text>
+                
+                <text x="20" y="55" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">#pay &#123;</text>
+                <text x="20" y="75" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">  background: #000;</text>
+                <text x="20" y="95" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">  border-radius: 6px;</text>
+                <text x="20" y="115" font-family="'JetBrains Mono', monospace" font-size="9" fill="var(--text-main)">&#125;</text>
+
+                <text x="107" y="138" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="600" fill="var(--text-tertiary)">Looks clean, still does nothing</text>
+              </g>
+
+              <!-- Plus 2 -->
+              <text x="512" y="152" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="700" fill="var(--border-strong)">+</text>
+
+              <!-- Box 3: JavaScript -->
+              <g transform="translate(530, 70)">
+                <rect x="0" y="0" width="200" height="150" rx="6" fill="var(--accent-js-bg)" stroke="var(--accent-js-border)" stroke-width="1.4" />
+                <rect x="0" y="0" width="200" height="26" rx="4" fill="var(--accent-js-primary)" />
+                <text x="100" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="900" fill="#000000">3. JAVASCRIPT (LOGIC)</text>
+                
+                <text x="14" y="55" font-family="'JetBrains Mono', monospace" font-size="8" fill="var(--text-main)">payBtn.onclick = () =&gt; &#123;</text>
+                <text x="14" y="73" font-family="'JetBrains Mono', monospace" font-size="8" fill="var(--text-main)">  fetch('/api/charge');</text>
+                <text x="14" y="91" font-family="'JetBrains Mono', monospace" font-size="8" fill="var(--text-main)">  showConfirmation();</text>
+                <text x="14" y="109" font-family="'JetBrains Mono', monospace" font-size="8" fill="var(--text-main)">&#125;;</text>
+
+                <text x="100" y="136" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="8.5" font-weight="800" fill="var(--accent-editorial)">Actually makes it work!</text>
+              </g>
+            </svg>
+            <p class="diagram-caption">How the web layers fit together: HTML gives structure, CSS styles it, and JavaScript makes it interactive.</p>
+          </div>
+
+          <h2>Where Does JavaScript Actually Run?</h2>
+
+          <p>
+            For a computer to run JavaScript, it needs a program called a <strong>JavaScript engine</strong>.
+          </p>
+
+          <p>
+            You don't need to know compiler theory to write great code, but here is what matters right now:
+          </p>
+
+          <ul>
+            <li><strong>V8</strong> is the engine inside Google Chrome, Brave, Edge, and <strong>Node.js</strong>.</li>
+            <li><strong>SpiderMonkey</strong> is the engine inside Mozilla Firefox.</li>
+            <li><strong>JavaScriptCore (Nitro)</strong> is the engine inside Apple Safari.</li>
+          </ul>
+
+          <blockquote>
+            <p>
+              <strong>The JavaScript engine only executes JavaScript syntax</strong> (variables, loops, functions, objects). Everything else comes from the <em>environment</em> it runs in.
+            </p>
+          </blockquote>
+
+          <p>
+            If you run JavaScript in a <strong>browser</strong>, the browser gives JS access to things like the web page (<code>document</code>), user clicks, and network requests (<code>fetch</code>).
+          </p>
+
+          <p>
+            If you run that exact same JavaScript in <strong>Node.js</strong>, there is no browser window or HTML button. Instead, Node.js gives JS access to your computer's files, operating system, and backend databases.
+          </p>
+
+          <!-- DIAGRAM 2: Browser vs Node.js Environment -->
+          <div class="diagram-container">
+            <svg class="diagram-svg" viewBox="0 0 760 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="760" height="300" fill="transparent" />
+
+              <text x="380" y="28" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="700" letter-spacing="0.08em" fill="var(--text-secondary)">WHERE JAVASCRIPT RUNS: BROWSER VS NODE.JS</text>
+              <text x="380" y="48" text-anchor="middle" font-family="'Newsreader', serif" font-size="13" font-style="italic" fill="var(--text-tertiary)">Same language engine &mdash; completely different APIs based on the host environment</text>
+
+              <!-- Central JS Engine -->
+              <g transform="translate(290, 80)">
+                <rect x="0" y="0" width="180" height="190" rx="6" fill="var(--accent-js-primary)" stroke="var(--accent-js-border)" stroke-width="1.5" />
+                <text x="90" y="32" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="900" fill="#000000">JS ENGINE</text>
+                <text x="90" y="48" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="9" font-weight="600" fill="#000000">(V8 / SpiderMonkey)</text>
+                
+                <rect x="14" y="66" width="152" height="106" rx="4" fill="var(--bg-surface)" />
+                <text x="90" y="86" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="700" fill="var(--text-main)">Core Language Only:</text>
+                <text x="90" y="104" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Variables &amp; Types</text>
+                <text x="90" y="122" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Functions &amp; Loops</text>
+                <text x="90" y="140" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Objects &amp; Arrays</text>
+                <text x="90" y="158" text-anchor="middle" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Promises &amp; Async</text>
+              </g>
+
+              <!-- Left Branch: Browser Host -->
+              <line x1="285" y1="175" x2="235" y2="175" stroke="var(--border-strong)" stroke-width="1.5" />
+              <polygon points="230,175 238,171 238,179" fill="var(--border-strong)" />
+
+              <g transform="translate(30, 80)">
+                <rect x="0" y="0" width="195" height="190" rx="6" fill="var(--bg-surface)" stroke="var(--border-strong)" stroke-width="1.2" />
+                <rect x="0" y="0" width="195" height="26" rx="4" fill="var(--bg-subtle)" />
+                <text x="97" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="var(--text-main)">HOST: BROWSER</text>
+                
+                <text x="16" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="var(--accent-editorial)">Browser APIs available:</text>
+                <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; document (DOM)</text>
+                <text x="16" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; window / alert()</text>
+                <text x="16" y="114" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; fetch() / AJAX</text>
+                <text x="16" y="134" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; localStorage</text>
+                <text x="16" y="154" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Canvas &amp; Audio</text>
+                
+                <text x="97" y="177" text-anchor="middle" font-family="'Newsreader', serif" font-size="9.5" font-style="italic" fill="var(--text-tertiary)">Client-side UI &amp; events</text>
+              </g>
+
+              <!-- Right Branch: Node.js Host -->
+              <line x1="475" y1="175" x2="525" y2="175" stroke="var(--border-strong)" stroke-width="1.5" />
+              <polygon points="530,175 522,171 522,179" fill="var(--border-strong)" />
+
+              <g transform="translate(535, 80)">
+                <rect x="0" y="0" width="195" height="190" rx="6" fill="var(--bg-surface)" stroke="var(--border-strong)" stroke-width="1.2" />
+                <rect x="0" y="0" width="195" height="26" rx="4" fill="var(--bg-subtle)" />
+                <text x="97" y="18" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="10.5" font-weight="700" fill="var(--text-main)">HOST: NODE.JS</text>
+                
+                <text x="16" y="52" font-family="'Plus Jakarta Sans', sans-serif" font-size="9" font-weight="600" fill="var(--accent-editorial)">Server/OS APIs available:</text>
+                <text x="16" y="74" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; fs (File System)</text>
+                <text x="16" y="94" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; http (Servers)</text>
+                <text x="16" y="114" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; process / env</text>
+                <text x="16" y="134" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; Database drivers</text>
+                <text x="16" y="154" font-family="'JetBrains Mono', monospace" font-size="8.5" fill="var(--text-secondary)">&bull; OS Sockets</text>
+                
+                <text x="97" y="177" text-anchor="middle" font-family="'Newsreader', serif" font-size="9.5" font-style="italic" fill="var(--text-tertiary)">Backend APIs &amp; scripts</text>
+              </g>
+            </svg>
+            <p class="diagram-caption">The core engine runs JavaScript syntax everywhere. The host environment determines whether you can manipulate buttons or access server files.</p>
+          </div>
+
+          <h2>What Can In-Browser JavaScript Actually Do?</h2>
+
+          <p>
+            When JavaScript runs inside a web page, it can:
+          </p>
+
+          <div class="rule-box">
+            <span class="rule-number">1. Update the UI Dynamically</span>
+            <div class="rule-title">DOM Manipulation</div>
+            <p>
+              Add new HTML elements, delete existing ones, change text, swap styles, and trigger smooth CSS animations on the fly.
+            </p>
+          </div>
+
+          <div class="rule-box">
+            <span class="rule-number">2. Respond to User Actions</span>
+            <div class="rule-title">Event Handling</div>
+            <p>
+              Listen for clicks, keyboard typing, form inputs, window resizing, and mouse movements to make the interface feel alive.
+            </p>
+          </div>
+
+          <div class="rule-box">
+            <span class="rule-number">3. Talk to Servers in the Background</span>
+            <div class="rule-title">Network Requests (Fetch API)</div>
+            <p>
+              Send and receive data from an API (e.g. submitting a payment, searching products) without reloading or freezing the page.
+            </p>
+          </div>
+
+          <div class="rule-box">
+            <span class="rule-number">4. Remember User State</span>
+            <div class="rule-title">Client Storage</div>
+            <p>
+              Save small pieces of data directly in the browser &mdash; like keeping a user's dark mode preference in <code>localStorage</code> or saving a session cookie.
+            </p>
+          </div>
+
+          <h2>The Browser Sandbox: What JS Cannot Do</h2>
+
+          <p>
+            Imagine if visiting a random website allowed that site to read your laptop's personal folders, delete your documents, or secretly turn on your camera. The web would be unusable.
+          </p>
+
+          <p>
+            To prevent this, in-browser JavaScript runs inside a strict <strong>Security Sandbox</strong>:
+          </p>
+
+          <ul>
+            <li><strong>No arbitrary filesystem access:</strong> JavaScript on a webpage cannot read, write, or delete files on your hard drive. (It can only receive a file if you explicitly drag-and-drop it or select it using an upload input).</li>
+            <li><strong>No silent hardware access:</strong> Web pages cannot access your microphone, camera, or GPS location without you explicitly clicking "Allow" on a browser permission prompt.</li>
+            <li><strong>Same-Origin Policy:</strong> Code running on <code>my-cool-game.com</code> cannot look inside an open tab running <code>your-bank.com</code>. Tabs from different domains are strictly isolated from each other.</li>
+          </ul>
+        </section>
+
+        <!-- Section 2: Specs & Manuals -->
+        <section id="section-specs-manuals">
+          <h2>Who Decides What's in JavaScript?</h2>
+
+          <p>
+            Who decides that modern JavaScript should have arrow functions (<code>=&gt;</code>) or optional chaining (<code>?.</code>)?
+          </p>
+
+          <p>
+            The language is governed by an official standard called <strong>ECMAScript</strong> (specification ECMA-262). When Chrome, Safari, or Firefox build their JavaScript engines, they follow this exact specification so your code behaves the same way everywhere.
+          </p>
+
+          <ul>
+            <li><strong>TC39 (Technical Committee 39):</strong> The group of browser vendors, engineers, and academics who review proposed new language features through 5 formal stages (Stage 0 Proposal to Stage 4 Shipped).</li>
+            <li><strong>MDN Web Docs (developer.mozilla.org):</strong> The official specification is written like a dry legal document. MDN is the actual manual every real working developer uses daily for syntax, practical examples, and edge cases.</li>
+            <li><strong>Can I Use (caniuse.com):</strong> A quick lookup tool to check whether a specific browser version supports a newly released feature.</li>
+          </ul>
+        </section>
+
+        <!-- Section 3: Editors -->
+        <section id="section-editors">
+          <h2>Your Setup: Code Editors</h2>
+
+          <p>
+            You don't need expensive tools to build with JavaScript. Here is what most professionals actually use:
+          </p>
+
+          <div class="editorial-table-wrapper">
+            <table class="editorial-table">
+              <thead>
+                <tr>
+                  <th style="width: 30%;">Editor</th>
+                  <th style="width: 35%;">Why Developers Use It</th>
+                  <th style="width: 35%;">Recommended For</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Visual Studio Code (VS Code)</strong></td>
+                  <td>Free, fast, huge extension ecosystem, excellent autocomplete and debugging.</td>
+                  <td><strong>Recommended for 95% of developers</strong> starting or building today.</td>
+                </tr>
+                <tr>
+                  <td><strong>WebStorm</strong></td>
+                  <td>Full-featured paid IDE from JetBrains with deep built-in refactoring tools.</td>
+                  <td>Large enterprise codebases where team-wide tooling is standardized.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p>
+            If you're using VS Code, install just two free extensions to start:
+          </p>
+          <ul>
+            <li><strong>Live Server:</strong> Automatically reloads your browser whenever you save an HTML or JS file.</li>
+            <li><strong>Prettier:</strong> Automatically cleans up your code formatting and indentation on save.</li>
+          </ul>
+        </section>
+
+        <!-- Section 4: Developer Console -->
+        <section id="section-console">
+          <h2>Your Immediate Playground: The Developer Console</h2>
+
+          <p>
+            Here is the best part about JavaScript: you don't even need to configure a build tool or open an editor to test an idea. You can run code right now in your browser.
+          </p>
+
+          <p>
+            Press <strong>F12</strong> (or <strong>Cmd + Option + I</strong> on Mac) right now, and click on the <strong>Console</strong> tab.
+          </p>
+
+          <!-- Code Snippet -->
+          <div class="code-block-container">
+            <div class="code-header">
+              <span>Browser DevTools &bull; Console</span>
+              <span class="code-badge">TRY LIVE IN CONSOLE</span>
+            </div>
+            <div class="code-content"><span class="c-comment">// 1. A simple calculation</span>
+<span class="c-kw">const</span> <span class="c-var">price</span> = <span class="c-num">499</span>;
+<span class="c-kw">const</span> <span class="c-var">tax</span> = <span class="c-var">price</span> * <span class="c-num">0.18</span>;
+<span class="c-fn">console</span>.<span class="c-fn">log</span>(<span class="c-str">"Total:"</span>, <span class="c-var">price</span> + <span class="c-var">tax</span>); <span class="c-comment">// Prints: Total: 588.82</span>
+
+<span class="c-comment">// 2. Pretty-print data with console.table</span>
+<span class="c-kw">const</span> <span class="c-var">browsers</span> = [
+  &#123; <span class="c-var">name</span>: <span class="c-str">"Chrome"</span>, <span class="c-var">engine</span>: <span class="c-str">"V8"</span> &#125;,
+  &#123; <span class="c-var">name</span>: <span class="c-str">"Firefox"</span>, <span class="c-var">engine</span>: <span class="c-str">"SpiderMonkey"</span> &#125;,
+  &#123; <span class="c-var">name</span>: <span class="c-str">"Safari"</span>, <span class="c-var">engine</span>: <span class="c-str">"JavaScriptCore"</span> &#125;
+];
+<span class="c-fn">console</span>.<span class="c-fn">table</span>(<span class="c-var">browsers</span>);</div>
+          </div>
+
+          <div class="teacher-callout">
+            <div class="callout-header">Quick Dev Tip</div>
+            <p>
+              In the browser console, pressing <strong>Enter</strong> runs the code immediately. If you want to write a multi-line function without executing it right away, press <strong>Shift + Enter</strong> to insert a new line.
+            </p>
+          </div>
+        </section>
+
+        <!-- Summary Card -->
+        <section class="summary-card">
+          <h3>Quick Recap: 5 Things to Remember</h3>
+          <ol>
+            <li>
+              <strong>JavaScript isn't Java:</strong> Created in 10 days in 1995; named after Java purely for early marketing buzz.
+            </li>
+            <li>
+              <strong>Engines execute syntax, hosts provide APIs:</strong> V8 runs your code; the browser provides UI APIs (DOM, Fetch) while Node.js provides server APIs (filesystem, network sockets).
+            </li>
+            <li>
+              <strong>Web pages are sandboxed:</strong> In-browser JS cannot touch your local hard drive or steal data across different tabs.
+            </li>
+            <li>
+              <strong>ECMAScript sets the rules, MDN documents them:</strong> Use MDN Web Docs as your primary reference when looking up any method or syntax.
+            </li>
+            <li>
+              <strong>You already have an IDE:</strong> Press F12 in any browser to open DevTools Console and run experiments instantly.
+            </li>
+          </ol>
+        </section>
+
+        <!-- Next Chapter Teaser -->
+        <div class="next-chapter-card">
+          <div class="next-chapter-meta">
+            <span>Up Next &bull; Section 2: Fundamentals</span>
+            <strong>Chapter 5: Hello, world!</strong>
+            <p style="margin: 4px 0 0; font-size: 0.88rem; color: var(--text-secondary);">
+              How HTML runs JavaScript, internal vs external scripts, where to put &lt;script&gt;, and the 3 ways to output data.
+            </p>
+          </div>
+          <a href="hello-world.html" class="modal-action-btn" style="text-decoration: none; display: inline-block;">Read Chapter 5 &rarr;</a>
+        </div>
+
+      </article>
+    </main>
+
+  </div>
+
+  <!-- Coming Soon Modal for other chapters -->
+  <div class="soon-modal-backdrop" id="soon-modal-backdrop">
+    <div class="soon-modal">
+      <button class="modal-close-btn" id="modal-close">&times;</button>
+      <span class="modal-badge">Coming Soon</span>
+      <h3 class="modal-title" id="modal-title">Chapter Title</h3>
+      <p class="modal-desc" id="modal-desc">
+        This chapter is next on the roadmap. Chapter 1 &amp; Chapter 5 are fully available right now!
+      </p>
+      <button class="modal-action-btn" onclick="document.getElementById('soon-modal-backdrop').classList.remove('open')">Got it</button>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>The Modern JavaScript Tutorial Roadmap</span>
+      <span>175 Chapters &bull; Clear, grounded guides for developers</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
