@@ -1,0 +1,244 @@
+Absolutely. Here is the **complete chapter list from The Modern JavaScript Tutorial (javascript.info)**, organized exactly by its major sections.
+
+## Part 1 — The JavaScript Language
+
+### 1. An Introduction
+1. An Introduction to JavaScript
+2. Manuals and specifications
+3. Code editors
+4. Developer console
+
+### 2. JavaScript Fundamentals
+5. Hello, world!
+6. Code structure
+7. The modern mode, `"use strict"`
+8. Variables
+9. Data types
+10. Interaction: `alert`, `prompt`, `confirm`
+11. Type Conversions
+12. Basic operators, maths
+13. Comparisons
+14. Conditional branching: `if`, `?`
+15. Logical operators
+16. Nullish coalescing operator `??`
+17. Loops: `while` and `for`
+18. The `"switch"` statement
+19. Functions
+20. Function expressions
+21. Arrow functions, the basics
+
+### 3. JavaScript Specials
+22. Code quality
+23. Debugging in the browser
+24. Coding Style
+25. Comments
+26. Ninja code
+27. Automated testing with Mocha
+28. Polyfills and transpilers
+
+### 4. Objects: The Basics
+29. Objects
+30. Object references and copying
+31. Garbage collection
+32. Object methods, `this`
+33. Constructor, operator `new`
+34. Optional chaining `?.`
+35. Symbol type
+36. Object to primitive conversion
+
+### 5. Data Types
+37. Methods of primitives
+38. Numbers
+39. Strings
+40. Arrays
+41. Array methods
+42. Iterables
+43. Map and Set
+44. WeakMap and WeakSet
+45. `Object.keys`, `values`, `entries`
+46. Destructuring assignment
+47. Date and time
+48. JSON methods, `toJSON`
+
+### 6. Advanced Working with Functions
+49. Recursion and stack
+50. Rest parameters and spread syntax
+51. Variable scope, closure
+52. The old `"var"`
+53. Global object
+54. Function object, NFE
+55. The `new Function` syntax
+56. Scheduling: `setTimeout` and `setInterval`
+57. Decorators and forwarding, `call/apply`
+58. Function binding
+59. Arrow functions revisited
+
+### 7. Object Properties Configuration
+60. Property flags and descriptors
+61. Property getters and setters
+
+### 8. Prototypes, Inheritance
+62. Prototypal inheritance
+63. `F.prototype`
+64. Native prototypes
+65. Prototype methods, objects without `__proto__`
+
+### 9. Classes
+66. Class basic syntax
+67. Class inheritance
+68. Static properties and methods
+69. Private and protected properties and methods
+70. Extending built-in classes
+71. Class checking: `instanceof`
+72. Mixins
+
+### 10. Error Handling
+73. Error handling, `try...catch`
+74. Custom errors, extending `Error`
+
+### 11. Promises, async/await
+75. Introduction: callbacks
+76. Promise
+77. Promises chaining
+78. Error handling with promises
+79. Promise API
+80. Promisification
+81. Microtasks
+82. Async/await
+
+### 12. Generators, Advanced Iteration
+83. Generators
+84. Async iteration and generators
+
+### 13. Modules
+85. Modules, introduction
+86. Export and Import
+87. Dynamic imports
+
+### 14. Miscellaneous
+88. Proxy and Reflect
+89. Eval: run a code string
+90. Currying
+91. Reference Type
+92. BigInt
+93. Unicode, String internals
+94. WeakRef and FinalizationRegistry
+
+---
+
+# Part 2 — Browser: Document, Events, Interfaces
+
+## 15. Document
+95. Browser environment, specs
+96. DOM tree
+97. Walking the DOM
+98. Searching: `getElement*`, `querySelector*`
+99. Node properties: type, tag and contents
+100. Attributes and properties
+101. Modifying the document
+102. Styles and classes
+103. Element size and scrolling
+104. Window sizes and scrolling
+105. Coordinates
+
+## 16. Introduction to Events
+106. Introduction to browser events
+107. Bubbling and capturing
+108. Event delegation
+109. Browser default actions
+110. Dispatching custom events
+
+## 17. UI Events
+111. Mouse events
+112. Moving the mouse: `mouseover/out`, `mouseenter/leave`
+113. Drag'n'Drop with mouse events
+114. Pointer events
+115. Keyboard: `keydown` and `keyup`
+116. Scrolling
+
+## 18. Forms, Controls
+117. Form properties and methods
+118. Focusing: `focus/blur`
+119. Events: `change`, `input`, `cut`, `copy`, `paste`
+120. Forms: event and method `submit`
+
+## 19. Document and Resource Loading
+121. Page: `DOMContentLoaded`, `load`, `beforeunload`, `unload`
+122. Scripts: `async`, `defer`
+123. Resource loading: `onload` and `onerror`
+
+## 20. Miscellaneous
+124. Mutation observer
+125. Selection and Range
+126. Event loop: microtasks and macrotasks
+
+---
+
+# Part 3 — Additional Articles
+
+## 21. Frames and Windows
+127. Popups and window methods
+128. Cross-window communication
+129. The clickjacking attack
+
+## 22. Binary Data, Files
+130. ArrayBuffer, binary arrays
+131. TextDecoder and TextEncoder
+132. Blob
+133. File and FileReader
+
+## 23. Network Requests
+134. Fetch
+135. FormData
+136. Fetch: Download progress
+137. Fetch: Abort
+138. Fetch: Cross-Origin Requests
+139. Fetch API
+140. URL objects
+141. XMLHttpRequest
+142. Resumable file upload
+143. Long polling
+144. WebSocket
+145. Server Sent Events
+
+## 24. Storing Data in the Browser
+146. Cookies, `document.cookie`
+147. LocalStorage, sessionStorage
+148. IndexedDB
+
+## 25. Animation
+149. Bezier curve
+150. CSS-animations
+151. JavaScript animations
+
+## 26. Web Components
+152. From the orbital height
+153. Custom elements
+154. Shadow DOM
+155. Template element
+156. Shadow DOM slots, composition
+157. Shadow DOM styling
+158. Shadow DOM and events
+
+## 27. Regular Expressions
+159. Patterns and flags
+160. Character classes
+161. Unicode: flag `u` and class `\p{...}`
+162. Anchors: string start `^` and end `$`
+163. Multiline mode of anchors `^ $`, flag `m`
+164. Word boundary: `\b`
+165. Escaping, special characters
+166. Sets and ranges `[...]`
+167. Quantifiers `+`, `*`, `?` and `{n}`
+168. Greedy and lazy quantifiers
+169. Capturing groups
+170. Backreferences in pattern: `\N` and `\k<name>`
+171. Alternation (OR) `|`
+172. Lookahead and lookbehind
+173. Catastrophic backtracking
+174. Sticky flag `y`, searching at position
+175. Methods of RegExp and String
+
+### Total: **175 chapters/articles**
+
+This is essentially a **complete JavaScript language → browser → advanced web-platform roadmap**, starting from variables and functions and eventually reaching **closures, prototypes, classes, promises, async/await, modules, DOM, events, event loop, Fetch, WebSockets, Web Components, and RegEx**.
